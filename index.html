@@ -18,13 +18,10 @@ Eric Mefford
 email: emeffordphysics@gmail.com
 
 I am a theoretical and computational physicist 
-who works broadly on strongly interacting quantum
-matter, including condensed matter systems, quantum
-gravity, string theory and quantum field theory. I 
-use the tools of hydrodynamics, quantum computation
-and quantum information, and numerical methods to 
-uncover direct observational signatures of novel
-physics in these systems. 
+who has worked broadly on quantum information and quantum
+matter. I have recently turned my attention to algorithms
+for quantum computers to solve challenging problems and 
+to building machine learning systems and AI agents.
 
 The following are some recent recorded seminars:
 <a href="https://online.kitp.ucsb.edu/online/quasipart23/mefford/">KITP</a> <a href="https://www.youtube.com/watch?v=T08LYsb6HaI">Holotube 1</a> <a href="https://www.youtube.com/watch?v=ygxSSoShcWE">Holotube 2</a>
@@ -36,6 +33,31 @@ A link to my papers can be found <a href="http://inspirehep.net/search?ln=en&ln=
 
 </pre>
 </div>
+
+ <h2>Download Protected File</h2>
+  <p>Enter password to unlock the download:</p>
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="checkPassword()">Submit</button>
+  <p id="error"></p>
+  
+  <a id="download-link" href="LeetCodeTopQs.pdf" download>Click here to download the file</a>
+  
+  <script>
+    function checkPassword() {
+      const correctPassword = "letmein";
+      const userPassword = document.getElementById("password").value;
+      const errorEl = document.getElementById("error");
+      const linkEl = document.getElementById("download-link");
+      
+      if (userPassword === correctPassword) {
+        errorEl.textContent = "";
+        linkEl.style.display = "inline-block";
+      } else {
+        errorEl.textContent = "Incorrect password. Please try again.";
+        linkEl.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 

@@ -31,21 +31,22 @@ A link to my papers can be found <a href="http://inspirehep.net/search?ln=en&ln=
 <br>
 </pre>
 
-  <!-- Download section -->
+  <!-- Password-protected downloads -->
   <div style="margin-top:20px;">
-    <button onclick="unlockDownload()" style="font-size:1em;padding:10px 20px;">Download File</button>
-    <p id="download-link" style="display:none; margin-top:10px;">
-      <a href="https://emeffordphysics.github.io/LeetCodeTopQs.pdf" download>Click here to download</a>
-    </p>
+    <button onclick="unlockDownloads()" style="font-size:1em;padding:10px 20px;">Unlock Downloads</button>
+    <div id="download-links" style="display:none; margin-top:15px;">
+      <p><a href="https://emeffordphysics.github.io/LeetCodeTopQs.pdf" download>Download Paper 1 (PDF)</a></p>
+      <p><a href="https://emeffordphysics.github.io/BoeingWhy.pdf" download>Download Paper 2 (PDF)</a></p>
+    </div>
   </div>
 
 </div>
 
 <script>
-  function unlockDownload() {
-    var password = prompt("Enter the password to download the file:");
+  function unlockDownloads() {
+    var password = prompt("Enter the password to unlock downloads:");
     if (password === "blackholes2025") {
-      document.getElementById("download-link").style.display = "block";
+      document.getElementById("download-links").style.display = "block";
     } else if (password !== null) {
       alert("Incorrect password.");
     }
@@ -54,4 +55,5 @@ A link to my papers can be found <a href="http://inspirehep.net/search?ln=en&ln=
 
 </body>
 </html>
+
 
